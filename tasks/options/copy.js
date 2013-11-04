@@ -37,7 +37,7 @@ module.exports = {
     }, {
       expand: true,
       cwd: 'public',
-      src: ['**'],
+      src: ['**', '.htaccess'],
       dest: 'tmp/result/'
     }, {
       src: ['vendor/**/*.js', 'vendor/**/*.css'],
@@ -56,6 +56,7 @@ module.exports = {
       cwd: 'tmp/result',
       src: [
         '**',
+        '.htaccess',
         '!**/*.{css,js}', // Already handled by concat
         '!**/*.{png,gif,jpg,jpeg}', // Already handled by imagemin
         '!tests/**/*', // No tests, please
